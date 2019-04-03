@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctype.h>
 
 using namespace std;
 
@@ -11,8 +12,9 @@ int main(int argc, char** argv) {
 
 	cout << "Ingrese el tipo de moneda: [Y(en), E(uro), L(ibra), D(olares)]" << endl;
 	cin >> type;
+	type = toupper(type);
 
-	if (type != 'Y' or type != 'E' or type != 'L' or type != 'D'){
+	if (type != 'Y' and type != 'E' and type != 'L' and type != 'D'){
 		cout << "Tipo incorrecto.";
 		return 0;
 	}
